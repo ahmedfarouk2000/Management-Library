@@ -1,0 +1,397 @@
+
+
+<html lang="en">
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Kill a Mockingbird</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+        <!-- -- -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- -- -->
+        
+<head>
+  
+    <style>
+       
+
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  background: url('mock.jpg') no-repeat center fixed;
+  background-size: cover;
+  overflow-y: auto;
+  overflow-x: hidden;
+  
+}
+#no-opacity {
+  margin-top: 66px;
+  margin-bottom: 1px;
+  height: 500px; 
+}
+#first-solid-bar {
+  background-color: rgb(0, 0, 0);
+  margin-left: -9px;
+  margin-right: -9px;
+  margin-top: 33px;
+  height: 900px;
+}
+#tv_container {
+    background: url("mac.png") no-repeat top left transparent;
+    width: 482px; /* Adjust TV image width */
+    height:396px; /* Adjust TV image height */
+}
+#video {
+margin-left: 22px;
+padding-top: 2ch;
+}
+#container{
+  padding-top: 60px;
+  margin-left: 520px;
+}
+#container2{
+  padding-top: 250px;
+  margin-right: 250px;
+}
+
+
+
+@media(max-width: 1100px) {
+  #first-solid-bar {
+    background-color: #fff;
+    margin-left: -9px;
+    margin-right: -9px;
+    height: 2065px;
+  }
+}
+/* sec added */
+div.highlightTextOut a:before, div.highlightTextIn a:before
+{
+  
+    position: absolute;
+    
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    overflow: hidden;
+    content: attr(alt);
+    transition: all 0.3s;
+    transform: scale(0.8);
+    opacity: 0;
+} 
+
+div.highlightTextOut a:hover:before, div.highlightTextIn a:hover:before
+{
+  
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+div.highlightTextIn a
+{
+    color: rgb(255, 255, 255); 
+}
+
+div.highlightTextIn a:before
+{
+  color: rgb(255, 255, 255); 
+    transform: scale(1.2);
+} 
+div.container
+{
+  
+  width: 100%;
+    font-family:Monospace;
+    margin: 0 auto;
+	padding: 2em 3em;
+
+}
+
+div.container a
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Monospace;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+.gray
+{
+    background: #000000;
+}
+ /* sec added */
+    /* <!-- //asdasd --> */
+    .main-hr {
+  width: 30%;
+  border: none;
+  border-top: 1px solid #c3c3c3;
+}
+.icon-btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cdcdcd;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.2s ease-in-out;
+}
+.add-btn:hover {
+  width: 150px;
+}
+.add-btn::before,
+.add-btn::after {
+  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 10px;
+  top: calc(50% - 2px);
+  background: red;
+}
+.add-btn::after {
+  right: 14px;
+  overflow: hidden;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.add-btn::before {
+  left: 14px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.icon-btn:focus {
+  outline: none;
+}
+.btn-txt {
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-family: tofa;
+  font-size: 19px;
+}
+.add-btn:hover::before,
+.add-btn:hover::after {
+  width: 4px;
+  border-radius: 2px;
+}
+.add-btn:hover .btn-txt {
+  opacity: 1;
+}
+.add-icon::after,
+.add-icon::before {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  top: calc(50% - 10px);
+  background: red;
+  overflow: hidden;
+}
+.add-icon::before {
+  left: 22px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.add-icon::after {
+  right: 22px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.add-btn:hover .add-icon::before {
+  left: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+.add-btn:hover .add-icon::after {
+  right: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+
+
+
+/* <!-- //asdasd --> */
+h1 {
+  float: left;
+  font-size:70px;
+  font-weight: 100;
+  color: #000000;
+  margin-left: 320px;
+  margin-top: 200px;
+  
+}
+@font-face{
+  src:url(fonts/Tribal.ttf);
+  font-family: tribal;
+}
+@font-face{
+  src:url(fonts/tofa.ttf);
+  font-family: tofa;
+}
+
+
+
+/* third added */
+.flip-box {
+  background-color: transparent;
+  width: 800px;
+  height: 300px;
+  margin-left: 362px;
+ padding-top: 120px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.flip-box-back {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transform: rotateX(180deg);
+}
+ /* end third  */
+
+
+
+
+  
+
+
+
+
+
+    </style>
+    
+</head>
+
+<body>
+  <div class="container gray highlightTextIn">
+
+    <a ></a>
+    <a ></a>
+    <a ></a>
+    <a ></a>
+    <a ></a>
+    <a ></a>
+    <a ></a>
+    <a ></a>
+    <a ></a>
+    
+    <a alt="READING LIST" onclick="location.href = '/readlist';" id="readlist" style="font-family: tribal;">READING LIST</a>
+    <a ></a>
+    <a ></a>
+    
+    <a alt="HOME" onclick="location.href = '/home';" style="font-family: tribal;">HOME</a>
+    <a ></a>
+    <a ></a>
+    <a alt="SIGN OUT"  onclick="location.href = '/';" style="font-family: tribal;" >SIGN OUT</a>
+    
+    <form method="POST" action='/search'>
+      <input style="font-family: trban;" name="Search" type="search" placeholder="Search"
+          aria-label="Search">
+      
+  </form>
+  </div>
+
+
+  <h1 >  <img src="/mockT.png">
+  </h1> 
+ 
+
+
+
+  <div id="no-opacity"></div>
+  <form method="POST" >
+  <div  style="text-align:center; margin-bottom:-60px;">
+    <button class="icon-btn add-btn">
+      <div class="add-icon"></div> 
+      <div class="btn-txt">Add to Want to Read List</div>
+    </button>
+  </div>
+  </form>
+
+  
+  
+  
+    
+  <div id="first-solid-bar">
+    
+    <div class="flip-box"  >
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <h3 style="font-family: tofa; font-size: 30px ;">Abstract</h3>
+          <h2 style="font-family: tofa; font-size:25px; "> The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it, To Kill A Mockingbird became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film, also a classic.</h2>
+        </div>
+        <div class="flip-box-back">
+          <h3 style="font-family: tofa; font-size: 30px;">Author</h3>
+          <h2  style="font-family: tofa; font-size:25px"> Nelle Harper Lee (April 28, 1926 – February 19, 2016) was an American novelist best known for her 1960 novel To Kill a Mockingbird. It won the 1961 Pulitzer Prize and has become a classic of modern American literature. Lee published only two books, yet she was awarded the Presidential Medal of Freedom in 2007 for her contribution to literature.</h2>
+        </div>
+      </div>
+    </div>
+  
+
+
+   <div id=container>
+          <div id="tv_container">
+         <div id=video>
+            <iframe  width="437" height="262" src="https://www.youtube.com/embed/3xM8hvEE2dI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        </div>
+      </div>
+      
+     
+
+    
+           
+             
+            
+      <script>
+        var errormsg= "<%= errormsg %>" ;
+            if(errormsg =="This book is already in your Reading list !!"){
+                swal({
+                    title: "Book Is Already In Your Read List !!",
+                    icon: "warning",
+                    button: "My Bad :p",
+                    });
+            };
+            if(errormsg =="Book Successfully Added !!"){
+                swal({
+                    title: "Book Successfully Added !!",
+                    icon: "success",
+                    button: "Let's Go <3",
+                    });
+            };
+    </script>
+        
+
+</body>
+</html>

@@ -1,0 +1,355 @@
+
+<html lang="en">
+  <head>
+      <style>
+          body {
+           background-image: url('https://wallpaperaccess.com/full/512679.jpg');
+              background-repeat: no-repeat;
+              background-size: 100%;
+          }
+          h1 {
+              color: white;
+              text-align: center;
+              -webkit-text-stroke: 1px blue;
+          }
+          .cont {
+              position: relative;
+              left: 600px;
+              top: 50px;
+              color: white;
+              -webkit-text-stroke: 0.5px black;
+          }
+          .container1 {
+              position: fixed;
+              left: 50px;
+              top: 150px;
+              color: white;
+          }
+          .container2 {
+              position: fixed;
+              left: 200px;
+              top: 150px;
+              color: white;
+          }
+          .container3 {
+              position: fixed;
+              left: 350px;
+              top: 150px;
+              color: white;
+          }
+          .readlist {
+              position: fixed;
+              left: 80px;
+              top: 370px;
+          }
+  
+  
+          /* //new added */
+  #home-brands {
+    margin-top: -10px;
+    background: black;
+  }
+    #home-brands .row {
+      margin: 0; 
+  }
+    #home-brands [class*="col"] {
+      height: 100%;
+      position: relative;
+      padding: 0;
+      overflow: hidden;
+      cursor: pointer; }
+      #home-brands [class*="col"]:hover .overlay {
+        background: rgba(0, 9, 18, 0.7); }
+      #home-brands [class*="col"]:hover .bg {
+        transform: scale(1.05); }
+      #home-brands [class*="col"]:nth-of-type(-n+3) {
+        height: 340px; }
+        #home-brands [class*="col"]:nth-of-type(-n+3) .overlay {
+          padding-top: 40px; }
+      #home-brands [class*="col"]:nth-last-child(-n+3) {
+       height: 55%; } /* thisssssssssssssssssssssssssss is what i was looking for the height of page*/
+        #home-brands [class*="col"]:nth-last-child(-n+3) .overlay {
+          padding-bottom: 40px; }
+    #home-brands .bg {
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: transform .2s; }
+    #home-brands .overlay {
+      background: rgba(0, 9, 18, 0.8);
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      
+      display: flex;
+      -ms-flex-align: center;
+          align-items: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+      transition: background .2s; }
+    #home-brands img {
+      max-width: 170px;
+      max-height: 50px;
+      -moz-filter: brightness(0) invert(100%);
+      -ms-filter: brightness(0) invert(100%);
+      -o-filter: brightness(0) invert(100%);
+      filter: brightness(0) invert(100%);
+      filter: gray;
+      }
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+      margin-right: -15px;
+    margin-left: -15px;
+  height: 77%}
+    @media (min-width: 576px) {
+      .row {
+        margin-right: -15px;
+        margin-left: -15px; } }
+    @media (min-width: 768px) {
+      .row {
+        margin-right: -15px;
+        margin-left: -15px; } }
+    @media (min-width: 992px) {
+      .row {
+        margin-right: -15px;
+        margin-left: -15px; } }
+    @media (min-width: 1200px) {
+      .row {
+        margin-right: -15px;
+        margin-left: -15px; } }
+  
+  
+  @media (min-width: 576px) {
+    
+    .col-lg-4 {
+      -ms-flex: 0 0 33.33333%;
+          flex: 0 0 33.33333%;
+      max-width: 33.33333%; }
+    
+   
+  }
+  
+          /* //new added */
+      /* sec added */
+div.highlightTextOut a:before, div.highlightTextIn a:before
+{
+  
+    position: absolute;
+    
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    overflow: hidden;
+    content: attr(alt);
+    transition: all 0.3s;
+    transform: scale(0.8);
+    opacity: 0;
+} 
+
+div.highlightTextOut a:hover:before, div.highlightTextIn a:hover:before
+{
+  
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+div.highlightTextIn a
+{
+    color: rgb(255, 255, 255); 
+}
+
+div.highlightTextIn a:before
+{
+  color: rgb(255, 255, 255); 
+    transform: scale(1.2);
+} 
+div.container
+{
+  
+  width: 100%;
+    font-family:Monospace;
+    margin: 0 auto;
+	padding: 2em 3em;
+
+}
+
+div.container a
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Monospace;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+.gray
+{
+    background: #000000;
+}
+ /* sec added */
+  
+   @font-face{
+    src:url(fonts/Tribal.ttf);
+    font-family: tribal;
+  }
+  
+  
+      </style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Books</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+           <!-- -- -->
+           <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+           <!-- -- -->
+  </head>
+  
+  <body>
+    <div class="container gray highlightTextIn">
+      <a ></a>
+      <a ></a>
+      <a ></a>
+      <a ></a>
+      <a ></a>
+      <a alt="READING LIST" onclick="location.href = '/readlist';" id="readlist" style="font-family: tribal;">READING LIST</a>
+      <a ></a>
+      <a ></a>
+      <a alt="HOME" onclick="location.href = '/home';" style="font-family: tribal;">HOME</a>
+      <a ></a>
+      <a ></a>
+      <a alt="SIGN OUT"  onclick="location.href = '/';" style="font-family: tribal;" >SIGN OUT</a>
+      <form method="POST" action='/search' style="margin-left: -200px; margin-top:-30px;" >
+        <input style="font-family: triban;" name="Search" type="search" placeholder="Search"
+            aria-label="Search">
+    </form>
+    </div>
+    
+      <section id="home-brands">
+          <div class="row">
+                        <a onclick="myFunction0()"  id="0" class="col-lg-4 ">
+                  <div class="bg"  id="00"></div>
+                  <div class="overlay">
+                    <div  style="font-family: tribal;font-size: 20px;color:white" id="000" >Novel</div>
+                  </div>
+                </a>
+  
+                <a onclick="myFunction1()"  id="1" class="col-lg-4 ">
+                  <div class="bg"  id="11"></div>
+                  <div class="overlay">
+                    <div  style="font-family: tribal;font-size: 20px;color:white" id="111" >Poetry</div>
+                  </div>
+                  
+                </a>
+                <a onclick="myFunction2()"  id="2" class="col-lg-4 ">
+                  <div class="bg" id="22"></div>
+                  <div class="overlay">
+                    <div  style="font-family: tribal;font-size: 20px;color:white" id="222">Fiction</div>
+                  </div>
+                </a>
+                <a onclick="myFunction3()"  id="3" class="col-lg-4 ">
+                  <div class="bg"  id="33"></div>
+                  <div class="overlay">
+                    <div  style="font-family: tribal;font-size: 20px;color:white" id="333">Fiction</div>
+                  </div>
+                </a>
+                <a onclick="myFunction4()"  id="4" class="col-lg-4 ">
+                  <div class="bg"  id="44"></div>
+                  <div class="overlay">
+                    <div  style="font-family: tribal;font-size: 20px;color:white" id="444">Fiction</div>
+                  </div>
+                </a>
+                <a onclick="myFunction5()"  id="5" class="col-lg-4 " >
+                  <div class="bg"  id="55"></div>
+                  <div class="overlay">
+                    <div  style="font-family: tribal;font-size: 20px;color:white" id="555" >Fiction</div>
+                  </div>
+                </a>
+                  </div>
+      </section>
+      <script>
+          var read = "<%=read%>" ; // you now got the reading list as one String ex : sun,duno
+         if(read.length!=0)
+          var split =read.split(",") // array of all books 
+         else 
+         var split=[]
+          for(i=0 ;split.length>i;i++){
+          // var Realname=""
+              if(split[i]=="sun"){
+            //  Realname="The Sun and Her Flowers"
+            document.getElementById(i+""+i).style.backgroundImage='url(sunG.jpg)'
+            document.getElementById(i+""+i+""+i).innerText="The Sun and Her Flowers";
+
+              }
+              else if (split[i]=="leaves"){
+             //Realname="Leaves of Grass"
+             document.getElementById(i+""+i).style.backgroundImage='url(leavesG.jfif)'
+             document.getElementById(i+""+i+""+i).innerText="Leaves Of Grass";
+              }
+              else if(split[i]=="flies"){
+            //  Realname="Lord of the Flies"
+            document.getElementById(i+""+i).style.backgroundImage='url(fliesG.jpg)'
+            document.getElementById(i+""+i+""+i).innerText="Lord of the Flies";
+              }
+              else if(split[i]=="grapes"){
+            //  Realname="The Grapes of Wrath"
+            document.getElementById(i+""+i).style.backgroundImage='url(/grapes.jpg)'
+            document.getElementById(i+""+i+""+i).innerText="The Grapes of Wrath";
+              }
+             else if (split[i]=="dune"){
+            // Realname="Dune"
+            document.getElementById(i+""+i).style.backgroundImage='url(duneG.jpg)'
+            document.getElementById(i+""+i+""+i).innerText="Dune";
+             }
+             else if(split[i]=="mockingbird"){
+           //  Realname="To Kill a Mockingbird"
+           document.getElementById(i+""+i).style.backgroundImage='url(mokG.jpg)'
+           document.getElementById(i+""+i+""+i).innerText="To Kill a Mockingbird";
+             }
+             //document.getElementById(i+"").value=Realname
+            
+          }
+          for(i=split.length ; 6>i;i++){
+             document.getElementById(i+"").style.visibility = 'hidden';
+          }
+                  function myFunction0() {
+                  var temp ="/"+split[0]
+                  location.replace(temp)
+                 }
+                 function myFunction1() {
+                  var temp ="/"+split[1]
+                  location.replace(temp)
+                 }
+                 function myFunction2() {
+                  var temp ="/"+split[2]
+                  location.replace(temp)
+                 }
+                 function myFunction3() {
+                  var temp ="/"+split[3]
+                  location.replace(temp)
+                 }
+                 function myFunction4() {
+                  var temp ="/"+split[4]
+                  location.replace(temp)
+                 }
+                 function myFunction5() {
+                  var temp ="/"+split[5]
+                  location.replace(temp)
+                 }
+         
+          
+          
+         </script>
+      
+      
+  </body>
+  </html>

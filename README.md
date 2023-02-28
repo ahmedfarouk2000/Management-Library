@@ -18,4 +18,7 @@ In addition to browsing and searching for books, the website also allows you to 
 
 
 
-![Uploading screencapture-localhost-3000-2023-02-28-17_32_54.png…]()
+![screencapture-localhost-3000-dune-2023-02-28-17_34_28](https://user-images.githubusercontent.com/93868173/221954680-aea20d89-4461-45c2-a5ec-f3f200dd1a72.jpg)
+![screencapture-localhost-3000-2023-02-28-17_32_54](https://user-images.githubusercontent.com/93868173/221954735-db2eb318-55b5-4a2d-8b11-c6dc263dee22.jpg)
+![screencapture-localhost-3000-readlist-2023-02-28-17_33_41](https://user-images.githubusercontent.com/93868173/221954769-0c6537d5-f529-4403-a746-ac8fcc904f08.jpg)
+![screencapture-localhost-3000-home-2023-02-28-17_33_11](https://user-images.githubusercontent.com/93868173/221954805-634a3443-37f9-4d5e-bd23-7be8d42abd0b.png)

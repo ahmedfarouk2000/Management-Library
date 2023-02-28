@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-image: url("background1.jpg");
+            background-repeat: repeat;
+            background-size: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        .firstContainer {
+            height: 100vh;
+            background-color: rgba(128, 128, 128, 0.247);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon {
+            background-color: rgb(176, 141, 141);
+
+            border-radius: 50%;
+            border: white 6px solid;
+            padding: 10px;
+
+            position: absolute;
+            left: 50%;
+            bottom: 100%;
+            transform: translate(-50%, 50%);
+            transition: all 0.6s;
+        }
+
+        .icon:hover {
+            background-color: rgb(152, 121, 121);
+        }
+
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            background: rgba(221, 221, 221, 0.5);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(3px);
+            border: 2px solid rgba(221, 221, 221, 0.25);
+            border-radius: 16px;
+            width: 600px;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+            padding: 50px 20px;
+            box-shadow: 0 0 20px rgb(33 33 33 / 20%);
+            position: relative;
+
+        }
+
+        .userInput {
+            position: relative;
+            /* margin: 10px; */
+            width: 70%;
+            /* background-color: red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .usernameIcon {
+            position: absolute;
+            left: 3%;
+            top: 50%;
+            transform: translate(0%, -50%);
+
+
+        }
+
+        .submitButton {
+            width: 70%;
+            padding: 12px;
+            background-color: rgb(176, 141, 141);
+            color: white;
+            outline: none;
+            border: none;
+            border-radius: 16px;
+            color: white;
+            font-weight: 400;
+            font-size: x-large;
+            transition: all 0.6s;
+
+        }
+
+        .submitButton:hover {
+            background-color: rgb(152, 121, 121);
+        }
+
+        input {
+            padding: 16px;
+            color: gray;
+            font-size: large;
+            border-radius: 16px;
+            padding-left: 50px;
+            transition: all 0.4s;
+            outline: none !important;
+            border: 1px solid gray;
+            width: 100%;
+        }
+
+
+        input:focus {
+            outline: none !important;
+            border: 1px solid cyan;
+            box-shadow: 0 0 10px #719ECE;
+        }
+
+        .checkbox {
+            width: 70%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            /* background-color: red; */
+            gap: 15px;
+            /* align-self: flex-start; */
+            transition: all 0.4s;
+        }
+
+        .checkbox:focus {
+            background-color: red;
+        }
+
+        .checkboxInput {
+            width: 20px;
+            height: 20px;
+            padding: 3px;
+            accent-color: gray;
+            all: unset;
+            /* background-color: red; */
+            cursor: pointer;
+            /* align-self: flex-start; */
+            transition: all 0.4s ease;
+        }
+
+        .checkboxInput:hover {
+            all: unset;
+            cursor: pointer;
+        }
+
+        .text {
+            color: gray;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- -- -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- -- -->
+</head>
+
+<body>
+    <!-- <div class="container">
+        <h1>Registration</h1>
+    </div>
+    <div class="cont">
+          
+        
+        <form method='post' >
+            
+            Username: <br>
+            <input type="text" id="user" name="username" required> <br>
+            Password: <br>
+            <input type="password" id="password" name="password"  required> <br> <br>
+            <input type="submit" id="simple_click" class="btn btn-secondary" value="Register"> <br>
+        </form>
+        
+        
+    </div> -->
+
+
+    <div class="firstContainer">
+
+
+        <form class="inputs" method="POST">
+
+            <h2>Create New Account</h2>
+
+            <div class="icon">
+                <svg width="46" height="46" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 20v-1a7 7 0 1 1 14 0v1"></path>
+                    <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path>
+                </svg>
+            </div>
+
+            <div class="userInput">
+                <svg class="usernameIcon" width="35" height="35" fill="none" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 20v-1a7 7 0 1 1 14 0v1"></path>
+                    <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path>
+                </svg>
+                <input type="text" placeholder="Username" method="POST" name="username">
+            </div>
+
+            <div class="userInput">
+                <svg class="usernameIcon" width="35" height="35" fill="none" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16 12H8m8 0h1.4a.6.6 0 0 1 .6.6v6.8a.6.6 0 0 1-.6.6H6.6a.6.6 0 0 1-.6-.6v-6.8a.6.6 0 0 1 .6-.6H16Zm0 0V8c0-1.333-.8-4-4-4S8 6.667 8 8v4h8Z">
+                    </path>
+                </svg>
+                <input type="text" placeholder="Password" name="password">
+            </div>
+            <button class="submitButton"> Register </button>
+
+
+            <a class="checkboxInput" href="/">Already Has Account</a>
+            <!-- <div class="checkbox">
+                <input class="checkboxInput" type="checkbox">
+                <span class="text">keep me logged in</span>
+            </div> -->
+
+        </form>
+
+
+    </div>
+
+
+    <script>
+        var errormsg = "<%= errormsg %>";
+        if (errormsg == "This username is already taken!!") {
+            //console.log(3000)
+            // alert(errormsg)
+            swal({
+                title: "This Username Is Already Taken !!",
+                text: "Try Again!!",
+                icon: "warning",
+                button: "Ohh No )': ",
+            });
+        }
+
+
+    </script>
+</body>
+
+</html>

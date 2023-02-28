@@ -7,14 +7,14 @@ var app = express();
 const fs=require('fs') ;
 const { parse } = require('path');
 const { render } = require('ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '../MyApp'));
 app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/',function(req,res){
- res.render('login',{errormsg:""})
+ res.render('index',{errormsg:""})
 });  
 
 app.post('/',function(req,res){
@@ -31,27 +31,11 @@ app.post('/',function(req,res){
   }
    }
    if(!flag ){// that means the username or passsord is incorrect
-     res.render('login',{errormsg:"username or password is incorrect !!"})
+     res.render('index',{errormsg:"username or password is incorrect !!"})
    }
     
 }) 
-//const fsLibrary  = require('fs')
- 
 
-
-      // var check=false 
-      // var flag10=false 
-      // fs.writeFileSync("check.json",JSON.stringify(check)) ;  
-     
-  //     res.render('login')
-  //  }
-  //  }) 
-
-  //  function setError( ,message ){
-
-
-  //  }
-  
    
 
 
@@ -73,7 +57,6 @@ app.get('/registration',function(req,res){
  var temp ={user:(req.body.username) ,password:(req.body.password) }// now I have the obj
  users.push(temp)
  fs.writeFileSync("users.json",JSON.stringify(users)) ;  
- //res.render('login',{errormsg:"You successfully registered !!"})
  res.redirect('/')
 }
 else {// will send him a msg that the user name is already taken
@@ -106,29 +89,13 @@ var users =JSON.parse(fs.readFileSync("users.json"))
   var temp ={user:(req.body.username) ,password:(req.body.password) }// now I have the obj
   users.push(temp)
   fs.writeFileSync("users.json",JSON.stringify(users)) ;  
-  res.render('login',{errormsg:"You successfully registered !!"})
+  res.render('index',{errormsg:"You successfully registered !!"})
  }
  else {// will send him a msg that the user name is already taken
   res.render('registration',{errormsg:"This username is already taken!!"})
  }
  });  
- ////////////////////////////////
-//  app.post('/login',function(req,res){
-//    var flag=false 
-//   for(i=0 ;users.length>i ;i++){
-//     if((req.body.username==users[i].user) && (req.body.password==users[i].password)){// so he's in my data base
-//     res.render('/home',{title: "req.body.username"})
-//     console.log(10)
-//     flag=true //we found him the account
-//     break 
-//   }
-//   }
-//   //  if(flag==false ) {// didnt find the acc in my data base
-//   //   var errormsg= "user is not registered before"
-//   //  res.render('login',{errormsg:errormsg})
-   
-//   // }
-//  });  
+
 app.get('/home',function(req,res){
   res.render('home')
  });  
